@@ -1,2 +1,35 @@
-<h3>I'm in the AppComponent</h3>
-
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+  
+  
+        <h3><b>I'm in the AppComponent!</b></h3>
+  
+  <hr>
+  
+  <!--
+    [disabled] is an example of Property Binding, see the app.component .ts file for the properties.
+    (click) is an example of Event Binding, see the app.component.ts file for the properties.
+  -->
+  <button 
+    class="btn btn-primary"
+  
+    [disabled]="!allowNewServer"
+  
+    (click)="onCreateServer()">Add Server</button>
+  
+  <!--<p [innerText]="allowNewServer"></p>-->
+  <p>{{ serverCreationStatus }}</p>
+  
+  
+  
+  <!--
+    <app-server> belows adds our 'server.component.html'
+  -->
+  <app-server></app-server>
+  
+  
+      </div>
+    </div>
+  </div>
+  
